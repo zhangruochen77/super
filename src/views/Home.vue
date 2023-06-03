@@ -14,12 +14,14 @@
                         <el-menu-item index="/goods">商品管理</el-menu-item>
                         <el-menu-item index="/vip">会员管理</el-menu-item>
                         <el-menu-item index="/need">需求管理</el-menu-item>
+                        <el-menu-item index="/consume">订单管理</el-menu-item>
+                        <el-menu-item index="/statistics">统计管理</el-menu-item>
                     </el-menu>
                 </el-aside>
             </div>
             <div class="main-controller">
                 <div v-if="currentPath === '/home'" class="home-info">
-                    hello 张若尘 选择操作开始编辑吧！
+                    hello 管理员 选择操作开始编辑吧！
                 </div>
                 <div v-else>
                     <router-view/>
@@ -35,7 +37,6 @@
 <script>
     import Header from "@/views/Header"
     import Footer from "@/views/Footer"
-    // import adminApi from "@/api/admin/Admin"
 
     export default {
         name: "Home",
@@ -51,12 +52,6 @@
         },
         methods: {
             init() {
-                // adminApi.getPersonInfo().then(resp => {
-                //     window.sessionStorage.setItem('user', JSON.stringify(resp.data.data))
-                //     this.isRoot = resp.data.data.roleId != 3
-                //     console.log("id" + resp.data.data.roleId)
-                //     console.log("root = " + this.isRoot)
-                // })
             },
             handleSelect(path) {
                 this.currentPath = path

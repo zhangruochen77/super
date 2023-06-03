@@ -8,6 +8,8 @@ import Goods from "@/views/goods/Goods";
 import Vip from "@/views/vip/Vip";
 import Need from "@/views/need/Need";
 import Login from "@/views/Login";
+import Consume from "@/views/consume/Consume";
+import Statistics from "@/views/statistics/Statistics";
 
 Vue.use(VueRouter)
 
@@ -45,63 +47,18 @@ const routes = [
             {
                 path: '/need',
                 name: 'need',
-                component: Need  // vip 管理
+                component: Need  // 需求 管理
+            },
+            {
+                path: '/consume',
+                name: 'consume',
+                component: Consume  // 订单 管理
+            },
+            {
+                path: '/statistics',
+                name: 'statistics',
+                component: Statistics  // 统计 管理
             }
-            // {
-            //     path: '/warehouse/goods',
-            //     name: 'goods',
-            //     component: Goods  // 商品管理
-            // },
-            // {
-            //     path: '/warehouse/inOrder',
-            //     name: 'inOrder',
-            //     component: InOrder  // 入库订单管理
-            // },
-            // {
-            //     path: '/car/car',
-            //     name: 'car',
-            //     component: Car
-            // },
-            // {
-            //     path: '/car/carRepair',
-            //     name: 'carRepair',
-            //     component: CarRepair
-            // },
-            // {
-            //     path: '/cmn/cmn',
-            //     name: 'cmn',
-            //     component: Cmn
-            // },
-            // {
-            //     path: '/order/order',
-            //     name: 'order',
-            //     component: Order
-            // },
-            // {
-            //     path: '/order/orderHistory',
-            //     name: 'orderHistory',
-            //     component: OrderHistory
-            // },
-            // {
-            //     path: '/dispatcher/carManage',
-            //     name: 'carManage',
-            //     component: CarManage
-            // },
-            // {
-            //     path: '/dispatcher/orderPlat',
-            //     name: 'orderPlat',
-            //     component: OrderPlat
-            // },
-            // {
-            //     path: '/dispatcher/personOrder',
-            //     name: 'personOrder',
-            //     component: PersonOrder
-            // },
-            // {
-            //     path: '/dispatcher/historyOrder',
-            //     name: 'historyOrder',
-            //     component: HistoryOrder
-            // }
         ]
     },
     {

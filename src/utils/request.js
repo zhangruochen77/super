@@ -42,7 +42,7 @@ service.interceptors.request.use(success => {
     // 请求前查询是否包含 token 如果有 token 则携带 token
     if (window.sessionStorage.getItem('token')) {
         success.headers['Authorization'] = window.sessionStorage.getItem('token')
-        Message.info(window.sessionStorage.getItem('token'))
+        // Message.info(window.sessionStorage.getItem('token'))
     }
 
     return success

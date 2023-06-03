@@ -19,7 +19,7 @@
                             </el-form-item>
                             <el-form-item>
                                 <el-button type="success" @click="loginByPass('loginForm')">登录</el-button>
-                                <el-button type="info" @click="switchToPhone" style="width: 112px">手机号登录</el-button>
+<!--                                <el-button type="info" @click="switchToPhone" style="width: 112px">手机号登录</el-button>-->
                             </el-form-item>
                         </el-form>
                     </div>
@@ -86,6 +86,7 @@
 
             return {
                 loginForm: {
+                    id: null,
                     username: 'root',
                     password: '031500'
                 },
@@ -167,13 +168,13 @@
                     return
                 }
 
-                codeApi.createCode(this.phoneForm.phone).then(resp => {
-                    if (resp.data.code == 200) {
-                        this.$message.success(resp.data.msg)  // 成功获取验证码
-                    } else {
-                        this.$message.warning(resp.data.msg)  // 获取验证码失败
-                    }
-                })
+                // codeApi.createCode(this.phoneForm.phone).then(resp => {
+                //     if (resp.data.code == 200) {
+                //         this.$message.success(resp.data.msg)  // 成功获取验证码
+                //     } else {
+                //         this.$message.warning(resp.data.msg)  // 获取验证码失败
+                //     }
+                // })
                 this.codeBtn = 60
                 this.codeBtnDisable = true
                 let internalTimer = setInterval(() => {
